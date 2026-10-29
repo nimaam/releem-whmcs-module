@@ -12,13 +12,13 @@ if (!function_exists('releem_setup_config')) {
         return [
             'name' => 'Releem Setup',
             'description' => 'Releem services dashboard, sales report and product setup for the Releem WHMCS module.',
-            'version' => '1.3.1',
+            'version' => '1.3.2',
             'author' => 'Releem',
             'fields' => [
                 'allow_email_adoption' => [
                     'FriendlyName' => 'Link existing Releem customers by email',
                     'Type' => 'yesno',
-                    'Description' => 'Allow a client to be linked to a Releem customer that already exists for the same email address even when the email is not verified in WHMCS. Leave off unless you trust the clients\' email addresses: anyone able to set a profile email could otherwise reach that customer\'s Releem API key.',
+                    'Description' => 'Allow a client to be linked to a Releem customer that already exists for the same email address even when the email is not verified in WHMCS. The public API key stays hidden until WHMCS verifies that email. Leave off unless you trust the clients\' email addresses: an unverified profile email can still be attached to that customer\'s subscription.',
                 ],
             ],
         ];
